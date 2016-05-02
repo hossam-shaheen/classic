@@ -35,16 +35,19 @@
 <body>
     <section class="main">
         <div class="container">
-            <header class="header">
+            <header class="header" id="home">
                 <div class="logo">
                     <img src="images/Classic-logo.png" alt="">
                 </div>
                 <nav class="menu">
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">About us</a></li>
-                        <li><a href="">Contact Us</a></li>
+                        <li><a data-target="#home" class="active" href="#">Home</a></li>
+                        <li><a data-target="#services" href="#">Services</a></li>
+                        <li><a data-target="#Aboutus
+
+" href="#">About us</a></li>
+                        <li><a data-target="#Projects" href="#">Projects</a></li>
+                        <li><a data-target="#testmonials" href="#">Contact Us</a></li>
                     </ul>
                 </nav>
 
@@ -74,7 +77,7 @@
         </div>
     </section>
     <div class="clearfix"></div>
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <h2 class="heading">
             Our Services
@@ -145,7 +148,7 @@
 
 
 
-    <section class="our-team">
+    <section class="our-team" id="Aboutus">
         <div class="container">
             <h2 class="heading">
             About us
@@ -170,7 +173,7 @@
     </section>
 
 
-    <div class="Testmonials">
+    <div class="Testmonials" id="testmonials">
         <div class="container">
             <h2 class="heading">What Our Client Say</h2>
             <div class="clients">
@@ -186,7 +189,7 @@
 
     </div>
 
-    <div class="projects">
+    <div class="projects" id="Projects">
         <div class="projectFilter" id="projectFilter">
             <div class="container">
                 <h2 class="heading">
@@ -226,48 +229,64 @@
 
 
     <footer>
-       <div class="container" id="footerStyle">
-        <div class="about">
-            <h2>About Classic</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis sed odio ut tempus. Curabitur nec ultricies tortor. Ut fringilla feugiat ligula.</p>
-            <div class="social-links">
+        <div class="container" id="footerStyle">
+            <div class="about">
+                <h2>About Classic</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis sed odio ut tempus. Curabitur nec ultricies tortor. Ut fringilla feugiat ligula.</p>
+                <div class="social-links">
 
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </div>
             </div>
-        </div>
 
 
-        <div class="tags">
-            <h2>Tags</h2>
-            <a href="">html</a>
-            <a href="">css</a>
-            <a href="">Js</a>
-            <a href="">bootstrap</a>
-            <a href="">jquery</a>
-            <a href="">angular</a>
-            <a href="">git</a>
-            <a href="">Wordpress</a>
-        </div>
+            <div class="tags">
+                <h2>Tags</h2>
+                <a href="">html</a>
+                <a href="">css</a>
+                <a href="">Js</a>
+                <a href="">bootstrap</a>
+                <a href="">jquery</a>
+                <a href="">angular</a>
+                <a href="">git</a>
+                <a href="">Wordpress</a>
+            </div>
 
 
-        <div class="ImportantLinks">
-            <h2>Important Links</h2>
-           <ul>
-               <li><a href="">Agency</a></li>
-               <li><a href="">Business</a></li>
-               <li><a href="">Multi Purpose</a></li>
-               <li><a href="">Audio</a></li>
-               <li><a href="">Business</a></li>
-           </ul>
-        </div>
-        
-        
+            <div class="ImportantLinks">
+                <h2>Important Links</h2>
+                <ul>
+                    <li><a href="">Agency</a></li>
+                    <li><a href="">Business</a></li>
+                    <li><a href="">Multi Purpose</a></li>
+                    <li><a href="">Audio</a></li>
+                    <li><a href="">Business</a></li>
+                </ul>
+            </div>
+
+
         </div>
         <a href="#">All Right Reserved 2016</a>
     </footer>
+
+    <div class="toTop">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </div>
+
+    <div class="color-box">
+        <a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
+        <div class="color-container">
+            <ul>
+                <li class="green"></li>
+                <li class="red"></li>
+                <li class="blue"></li>
+            </ul>
+
+        </div>
+    </div>
 
     <!--jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>

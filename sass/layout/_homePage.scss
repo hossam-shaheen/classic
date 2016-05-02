@@ -19,14 +19,19 @@
             ul {
                 display: flex;
                 justify-content: center;
+                
                 li {
                     list-style: none;
                     line-height: 30px;
                     color: #fff;
                     padding: 4px 10px;
-                    &:first-of-type a {
+                    
+                    
+                    a.active{
+                        
                         color: $mainColor;
                         border-bottom: 1px solid $mainColor;
+                    
                     }
                     a {
                         color: #fff;
@@ -34,11 +39,15 @@
                         padding-bottom: 4px;
                         font-size: $PostsParagraphSize;
                         font-weight: 600;
+                        text-decoration: none;
+                        cursor: pointer;
                         &:hover {
                             border-bottom: 1px solid $mainColor;
                         }
                     }
+                    
                 }
+                
             }
         }
     }
