@@ -1,0 +1,20 @@
+button {
+    background: transparent;
+    border: 1px solid #c4c4c4;
+    @include padding(10px,12px);
+    @include radius(3px);
+    color:$GrayColor;
+    font-family: $primaryFont;
+    text-transform: uppercase;
+    margin-right: 8px;
+}
+
+button.active {
+    background: $mainColor;
+    @include padding(10px,12px);
+    border: 1px solid $mainColor;   
+    @include radius(3px);
+    font-family: $primaryFont;
+    text-transform: uppercase;
+     color: #fff; 
+}

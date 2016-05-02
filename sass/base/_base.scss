@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,a,span,li,p{
+    font-family: $primaryFont;
+}
+h2.heading{
+    
+    font-size: $SectionMainHeadingfontSize;
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 25px;
+  
+}
+ h2.heading::after{
+       border-bottom: 1px solid $mainColor;
+        position: absolute;
+        width: 90px;
+        height: 30px;
+        top:30px;
+        left: 0;
+        z-index: 99999;
+    }
+
+#projectFilter .mix{
+	display: none;
+}

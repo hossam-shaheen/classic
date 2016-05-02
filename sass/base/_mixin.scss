@@ -1,0 +1,16 @@
+@mixin radius($r){
+    
+    border-radius: $r;
+}
+
+@mixin padding($x,$y){
+    padding: $x $y;
+}
+@mixin shadow($shadow){
+    
+    box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+}
