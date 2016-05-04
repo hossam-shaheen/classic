@@ -6,18 +6,27 @@
 * {
   box-sizing: border-box; }
 
-/* line 4, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
-h1, h2, h3, h4, h5, h6, a, span, li, p {
+/* line 14, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+li,
+p {
   font-family: "Raleway", sans-serif; }
 
-/* line 7, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+/* line 18, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
 h2.heading {
   font-size: 20px;
   position: relative;
   font-weight: 600;
   margin-bottom: 25px; }
 
-/* line 15, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+/* line 25, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
 h2.heading::after {
   border-bottom: 1px solid #1abc9c;
   position: absolute;
@@ -27,11 +36,11 @@ h2.heading::after {
   left: 0;
   z-index: 99999; }
 
-/* line 25, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+/* line 35, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
 #projectFilter .mix {
   display: none; }
 
-/* line 29, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+/* line 39, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
 .toTop {
   width: 50px;
   height: 50px;
@@ -46,14 +55,14 @@ h2.heading::after {
   display: none; }
 
 /*color box*/
-/* line 46, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+/* line 56, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
 .color-box {
   position: fixed;
   left: 0;
   top: 50px;
   display: flex;
   flex-direction: row-reverse; }
-  /* line 52, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+  /* line 62, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
   .color-box a {
     border: 1px solid #9c9c9c;
     background: #1abc9c;
@@ -64,70 +73,138 @@ h2.heading::after {
     line-height: 35px;
     text-align: center;
     font-size: 20px; }
-  /* line 64, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+  /* line 73, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
   .color-box .color-container {
     background: #fff;
     border: 1px solid #ccc;
     padding: 5px; }
-    /* line 68, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+    /* line 77, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
     .color-box .color-container ul {
       list-style: none;
       padding-left: 0; }
-      /* line 71, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+      /* line 80, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
       .color-box .color-container ul li {
         width: 30px;
         height: 30px;
         cursor: pointer; }
-      /* line 78, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+      /* line 85, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
       .color-box .color-container ul li.green {
         background: #1abc9c; }
-      /* line 81, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+      /* line 88, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
       .color-box .color-container ul li.red {
         background: #c0392b;
         margin-top: 4px;
         margin-bottom: 4px; }
-      /* line 86, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+      /* line 93, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
       .color-box .color-container ul li.blue {
         background: #2980b9; }
 
+/*Loader*/
+/* line 103, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+.loader {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #1abc9c;
+  z-index: 999; }
+  /* line 113, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+  .loader .spin {
+    height: 15px;
+    background: #2c3e50;
+    flex: 0 1 8px;
+    margin-right: 1px;
+    margin-left: 1px;
+    margin-top: 20%;
+    animation: spin 0.3s infinite alternate backwards ease-in-out; }
+    /* line 121, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+    .loader .spin:nth-child(1) {
+      animation-delay: 0.08s; }
+    /* line 124, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+    .loader .spin:nth-child(2) {
+      animation-delay: 0.17s; }
+    /* line 127, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+    .loader .spin:nth-child(3) {
+      animation-delay: 0.24s; }
+    /* line 130, C:/Users/Hossam shahen/Desktop/Classic/sass/base/_base.scss */
+    .loader .spin:nth-child(4) {
+      animation-delay: 0.3s; }
+
+@keyframes spin {
+  0% {
+    transform: scaleY(1); }
+  100% {
+    transform: scaleY(1.6); } }
+
+/*loader-circle*/
+/*
+.loader {
+   
+    .circle {
+        margin: 15px auto;
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        background:#2c3e50; 
+        animation: CircleSpin .4s infinite alternate backwards ease-in-out;
+    }
+}
+
+@keyframes CircleSpin{
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+         transform: translateY(30px) scale(1.3);
+        
+    }
+}
+*/
 /**layout**/
 /* line 1, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+body {
+  transform-style: preserve-3d; }
+
+/* line 5, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
 .main {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/main.jpg);
   width: 100%;
   /*header*/
   /*slider*/ }
-  /* line 5, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+  /* line 9, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
   .main .header {
     display: flex;
     justify-content: space-between;
     margin-top: 25px; }
-    /* line 9, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    /* line 13, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
     .main .header .logo {
       flex: 0 1 20%;
       width: 20%; }
-      /* line 12, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+      /* line 16, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
       .main .header .logo img {
         max-width: 100%;
         height: auto; }
-    /* line 17, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    /* line 21, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
     .main .header .menu {
       flex: 0 1 65%; }
-      /* line 19, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+      /* line 23, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
       .main .header .menu ul {
         display: flex;
         justify-content: center; }
-        /* line 23, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+        /* line 26, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
         .main .header .menu ul li {
           list-style: none;
           line-height: 30px;
           color: #fff;
           padding: 4px 10px; }
-          /* line 30, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+          /* line 31, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
           .main .header .menu ul li a.active {
             color: #1abc9c;
             border-bottom: 1px solid #1abc9c; }
-          /* line 36, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+          /* line 35, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
           .main .header .menu ul li a {
             color: #fff;
             text-transform: uppercase;
@@ -136,48 +213,48 @@ h2.heading::after {
             font-weight: 600;
             text-decoration: none;
             cursor: pointer; }
-            /* line 44, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+            /* line 43, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
             .main .header .menu ul li a:hover {
               border-bottom: 1px solid #1abc9c; }
-  /* line 55, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+  /* line 52, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
   .main .slider {
     margin-bottom: 0; }
-    /* line 57, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    /* line 54, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
     .main .slider .bx-wrapper {
       background: transparent;
       border: none;
       box-shadow: none;
       margin-bottom: 0; }
-    /* line 63, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    /* line 60, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
     .main .slider ul {
       z-index: 9999;
       display: flex;
       justify-content: center; }
-      /* line 67, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+      /* line 64, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
       .main .slider ul li {
         color: #fff; }
-        /* line 71, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+        /* line 68, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
         .main .slider ul li h2,
         .main .slider ul li p,
         .main .slider ul li a {
           text-align: center;
           display: block; }
-        /* line 75, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+        /* line 72, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
         .main .slider ul li h2 {
           font-size: 35px;
           text-transform: capitalize; }
-          /* line 78, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+          /* line 75, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
           .main .slider ul li h2 span {
             color: #1abc9c;
             font-weight: 700; }
-        /* line 83, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+        /* line 80, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
         .main .slider ul li p {
           color: #e8e8e8;
           font-size: 22px;
           width: 60%;
           text-align: center;
           margin: 25px auto; }
-        /* line 90, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+        /* line 87, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
         .main .slider ul li a {
           color: #fff;
           font-size: 18px;
@@ -186,65 +263,110 @@ h2.heading::after {
           margin: 15px auto; }
 
 /*Services*/
-/* line 105, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+/* line 102, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
 .services {
   padding-top: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #ccc;
   background: #f2f2f2; }
-  /* line 110, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+  /* line 107, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
   .services .service {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; }
-    /* line 114, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    /* line 111, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
     .services .service .service-posts {
       flex: 0 1 31%;
       display: flex; }
-      /* line 117, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+      /* line 114, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
       .services .service .service-posts i {
         color: #1abc9c;
         font-size: 45px;
         margin-right: 40px;
         margin-top: 14px; }
-      /* line 123, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+      /* line 120, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
       .services .service .service-posts .description {
         display: flex;
         flex-direction: column; }
-        /* line 126, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+        /* line 123, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
         .services .service .service-posts .description h3 {
           font-size: 18px;
           color: #2d2d2d; }
-        /* line 130, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+        /* line 127, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
         .services .service .service-posts .description p {
           font-size: 14px;
           color: #9c9c9c; }
 
 /*team*/
-/* line 142, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+/* line 139, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
 .our-team {
   padding-top: 40px;
   padding-bottom: 40px; }
-  /* line 145, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+  /* line 142, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
   .our-team .team {
     display: flex;
     justify-content: space-between; }
-    /* line 148, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    /* line 145, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
     .our-team .team article.team-description {
       flex: 0 1 35%; }
-    /* line 151, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    /* line 148, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
     .our-team .team .team-images {
       flex: 0 1 63%;
       display: flex;
       justify-content: space-between; }
-      /* line 155, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+      /* line 152, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
       .our-team .team .team-images img {
-        width: 22%;
+        width: 100%;
         border-radius: 5px;
         height: 136px; }
+      /* line 157, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+      .our-team .team .team-images .teamDescription {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px; }
+        /* line 161, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+        .our-team .team .team-images .teamDescription .teampargraph {
+          width: 100%;
+          height: 100%;
+          background: rgba(26, 188, 156, 0.7);
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translatex(100%);
+          transition: all 0.4s ease-in-out; }
+          /* line 170, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+          .our-team .team .team-images .teamDescription .teampargraph p {
+            text-align: center;
+            line-height: 140px;
+            color: #fff;
+            font-weight: 600; }
+        /* line 177, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+        .our-team .team .team-images .teamDescription:hover .teampargraph {
+          animation: moving 0.6s;
+          -webkit-animation: moving 0.6s;
+          animation-direction: alternate;
+          -webkit-animation-direction: alternate;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@keyframes moving {
+  0% {
+    transform: translatex(100%); }
+  50% {
+    transform: translatex(-80%); }
+  100% {
+    transform: translatex(0%); } }
+
+@-webkit-keyframes moving {
+  0% {
+    transform: translatex(100%); }
+  50% {
+    transform: translatex(-80%); }
+  100% {
+    transform: translatex(0%); } }
 
 /*Testmonials*/
-/* line 167, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+/* line 217, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
 .Testmonials {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -252,66 +374,112 @@ h2.heading::after {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/newsletter.jpg) no-repeat;
   background-attachment: fixed;
   height: 290px; }
-  /* line 174, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+  /* line 224, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
   .Testmonials h2 {
     color: #fff; }
-  /* line 177, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+  /* line 227, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
   .Testmonials p {
     color: #fff;
     font-size: 14px; }
-  /* line 181, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+  /* line 231, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
   .Testmonials span {
     color: #1abc9c;
     font-weight: 600;
     font-size: 17px; }
 
 /**projects**/
-/* line 191, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+/* line 241, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
 .projects {
   padding-top: 40px;
   padding-bottom: 40px; }
-  /* line 194, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+  /* line 245, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
   .projects .filterControls {
     margin-bottom: 25px; }
-  /* line 198, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+  /* line 249, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
   .projects .filterContent .mix {
-    margin-bottom: 10px; }
-    /* line 200, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
-    .projects .filterContent .mix img {
+    margin-bottom: 10px;
+    position: relative;
+    width: 32%;
+    height: 220px;
+    float: left;
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d; }
+    /* line 257, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    .projects .filterContent .mix:nth-child(3n+2) {
+      margin-right: 4px;
+      margin-left: 4px; }
+    /* line 262, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    .projects .filterContent .mix:hover {
+      transform: rotateY(180deg); }
+    /* line 266, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    .projects .filterContent .mix .front {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 213px;
+      z-index: 2;
+      border: 3px solid #fff;
+      backface-visibility: hidden; }
+      /* line 276, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+      .projects .filterContent .mix .front img {
+        border-radius: 8px;
+        box-shadow: 0 0 15px #ccc;
+        -webkit-box-shadow: 0 0 15px #ccc;
+        -moz-box-shadow: 0 0 15px #ccc;
+        -o-box-shadow: 0 0 15px #ccc;
+        -ms-box-shadow: 0 0 15px #ccc;
+        width: 100%; }
+    /* line 282, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    .projects .filterContent .mix .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 210px;
+      background: #1abc9c;
       border-radius: 8px;
       box-shadow: 0 0 15px #ccc;
       -webkit-box-shadow: 0 0 15px #ccc;
       -moz-box-shadow: 0 0 15px #ccc;
       -o-box-shadow: 0 0 15px #ccc;
       -ms-box-shadow: 0 0 15px #ccc;
-      border: 3px solid #fff; }
+      border: 3px solid #fff;
+      text-align: center;
+      line-height: 220px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      z-index: 1;
+      transform: rotateY(180deg);
+      backface-visibility: hidden; }
 
 /**footer**/
-/* line 212, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+/* line 309, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
 footer {
   background: #232323;
   padding-top: 40px;
   padding-bottom: 40px;
   color: #fff; }
-  /* line 217, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+  /* line 314, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
   footer #footerStyle {
     display: flex;
     justify-content: space-between; }
-    /* line 220, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    /* line 317, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
     footer #footerStyle div {
       flex: 0 1 30%; }
-      /* line 222, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+      /* line 319, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
       footer #footerStyle div h2 {
         font-size: 18px; }
-      /* line 225, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+      /* line 322, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
       footer #footerStyle div p {
         font-size: 14px;
         color: #9c9c9c; }
-      /* line 230, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+      /* line 327, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
       footer #footerStyle div .social-links i {
         padding: 8px;
         border: 1px solid #fff; }
-    /* line 237, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    /* line 334, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
     footer #footerStyle .tags a {
       padding: 5px 8px;
       border: 1px solid #fff;
@@ -320,26 +488,26 @@ footer {
       margin-bottom: 8px;
       margin-right: 4px;
       color: #fff; }
-    /* line 248, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+    /* line 345, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
     footer #footerStyle .ImportantLinks ul {
       list-style: none;
       padding: 0px 0px; }
-      /* line 251, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+      /* line 348, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
       footer #footerStyle .ImportantLinks ul li {
         padding-top: 4px;
         padding-bottom: 4px;
         color: #fff;
         border-bottom: 1px solid #9c9c9c; }
-        /* line 257, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+        /* line 353, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
         footer #footerStyle .ImportantLinks ul li:last-child {
           border: none; }
-        /* line 260, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+        /* line 356, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
         footer #footerStyle .ImportantLinks ul li a {
           text-decoration: none;
           color: #fff;
           font-size: 14px;
           text-align: left; }
-  /* line 270, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
+  /* line 366, C:/Users/Hossam shahen/Desktop/Classic/sass/layout/_homePage.scss */
   footer a {
     text-align: center;
     color: #9c9c9c;

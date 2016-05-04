@@ -102,6 +102,25 @@ $(document).ready(function () {
         
         $(".color-container").toggle(600);
     });
+   
+    $("body").ready(function(){
+        
+        $(".loader").delay(700).fadeOut(600).hide().css({
+            "dispay":"none"});
+        
+    });
+    
+    $(document).scroll(function(){
+        console.log($("#services").offset().top);
+       if($(this).scrollTop() >= $("#services").offset().top){
+           
+           $(".header").addClass("fixed");
+           
+       }else{
+           $(".header").removeClass("fixed");
+           
+       }
+    });
 
 
 
